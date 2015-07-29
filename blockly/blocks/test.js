@@ -38,36 +38,6 @@ Blockly.Blocks['neopixel'] = {
   }
 };
 
-Blockly.Blocks['sequential_animation'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("Sequential Animation");
-    this.appendValueInput("COLOR")
-        .appendField("Color");
-    this.appendValueInput("START_INDEX")
-        .setCheck("Number")
-        .appendField("Start Position");
-    this.appendValueInput("END_INDEX")
-        .setCheck("Number")
-        .appendField("End Position");
-    this.appendValueInput("DELAY")
-        .setCheck("Number")
-        .appendField("Delay");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("TRUE"), "LIGHTS_TRAIL")
-        .appendField("Lights Trail");
-    this.appendDummyInput()
-        .appendField(new Blockly.FieldCheckbox("TRUE"), "CLEAR_WHEN_DONE")
-        .appendField("Clear When Done");
-    this.setInputsInline(false);
-    this.setPreviousStatement(true);
-    this.setNextStatement(true);
-    this.setColour(0);
-    this.setTooltip('');
-    this.setHelpUrl('http://www.example.com/');
-  }
-};
-
 Blockly.Blocks['neopixels'] = {
   init: function() {
     this.appendDummyInput()
@@ -83,6 +53,69 @@ Blockly.Blocks['neopixels'] = {
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setColour(260);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+Blockly.Blocks['sequential_animation'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Wave Animation");
+    this.appendValueInput("COLOR")
+        .appendField("Color");
+    this.appendValueInput("START_INDEX")
+        .setCheck("Number")
+        .appendField("Start Postion");
+    this.appendValueInput("END_INDEX")
+        .setCheck("Number")
+        .appendField("End Postion");
+    this.appendValueInput("DELAY")
+        .setCheck("Number")
+        .appendField("Delay");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("TRUE"), "LIGHTS_TRAIL")
+        .appendField("Lights Trail");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("TRUE"), "CLEAR_WHEN_DONE")
+        .appendField("Clear When Done");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(210);
+    this.setTooltip('');
+    this.setHelpUrl('http://www.example.com/');
+  }
+};
+
+Blockly.Blocks['split_wave_animation'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Split Wave Animation");
+    this.appendValueInput("COLOR")
+        .appendField("Color");
+    this.appendValueInput("START_INDEX")
+        .setCheck("Number")
+        .appendField("Start Position");
+    this.appendValueInput("END_INDEX")
+        .setCheck("Number")
+        .appendField("End Position");
+    this.appendValueInput("DELAY")
+        .setCheck("Number")
+        .appendField("Delay");
+    this.appendValueInput("NUMBER_OF_SPLITS")
+        .setCheck("Number")
+        .appendField("# of Splits");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("TRUE"), "LIGHTS_TRAIL")
+        .appendField("Lights Trail");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldCheckbox("TRUE"), "CLEAR_WHEN_DONE")
+        .appendField("Clear When Done");
+    this.setInputsInline(false);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setColour(65);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');
   }
